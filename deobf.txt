@@ -1,3 +1,8 @@
+
+import base64 as b64, marshal as m, random, string
+from cryptography.fernet import Fernet as F
+from Cryptodome.Cipher import AES as A
+from Cryptodome.Util.Padding import unpad as p
 def _g7h8i9(encrypted_data, aes_key):
     encrypted_data = b64.b64decode(encrypted_data)
     iv = encrypted_data[:16]
